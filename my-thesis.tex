@@ -23,6 +23,8 @@
 \input{my-thesis-setup}
 
 
+\selectlanguage{german}
+
 % **************************************************
 % Document CONTENT
 % **************************************************
@@ -31,10 +33,10 @@
 % --------------------------
 % rename document parts
 % --------------------------
-%\renewcaptionname{ngerman}{\figurename}{Abb.}
-%\renewcaptionname{ngerman}{\tablename}{Tab.}
-\renewcaptionname{english}{\figurename}{Fig.}
-\renewcaptionname{english}{\tablename}{Tab.}
+\renewcaptionname{german}{\figurename}{Abb.}
+\renewcaptionname{german}{\tablename}{Tab.}
+%\renewcaptionname{english}{\figurename}{Fig.}
+%\renewcaptionname{english}{\tablename}{Tab.}
 
 % --------------------------
 % Front matter
@@ -63,9 +65,9 @@
 \pagestyle{maincontentstyle} 	% fancy header and footer
 
 \input{content/chapter-introduction} % INCLUDE: introduction
-\input{content/chapter-related-work} % INCLUDE: related work
-\input{content/chapter-system}	% INCLUDE: system
-\input{content/chapter-concepts} % INCLUDE: concepts
+\input{content/chapter-contents} % INCLUDE: contents
+\input{content/chapter-technologies}	% INCLUDE: technologies
+\input{content/chapter-programming} % INCLUDE: programming
 \input{content/chapter-conclusion} % INCLUDE: conclusion
 \cleardoublepage
 
