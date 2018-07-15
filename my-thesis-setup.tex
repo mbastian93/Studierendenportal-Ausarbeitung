@@ -1,0 +1,75 @@
+% !TEX root = my-thesis.tex
+
+
+% **************************************************
+% Files' Character Encoding
+% **************************************************
+\PassOptionsToPackage{utf8}{inputenc}
+\usepackage{inputenc}
+
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Entwicklung eines Studierendenportals als Progressive Web App mit Angular}
+\newcommand{\thesisName}{Marcel Bastian}
+\newcommand{\thesisSubject}{Matrikelnr.: 2687696}
+\newcommand{\thesisDate}{15.Juli 2018}
+\newcommand{\thesisVersion}{My First Draft}
+
+\newcommand{\thesisFirstReviewer}{Prof. Dr. André Brinkman}
+\newcommand{\thesisFirstReviewerUniversity}{\protect{Johannes Gutenberg-Universität Mainz}}
+\newcommand{\thesisFirstReviewerDepartment}{Zentrum für Datenverarbeitung}
+
+\newcommand{\thesisSecondReviewer}{Dr. Hans-Jürgen Schröder}
+\newcommand{\thesisSecondReviewerUniversity}{\protect{Johannes Gutenberg-Universität Mainz}}
+\newcommand{\thesisSecondReviewerDepartment}{Institut für Informatik}
+
+\newcommand{\thesisFirstSupervisor}{Prof. Dr. André Brinkman}
+\newcommand{\thesisSecondSupervisor}{Dr. Hans-Jürgen Schröder}
+
+\newcommand{\thesisUniversity}{\protect{Johannes Gutenberg-Universität Mainz}}
+\newcommand{\thesisUniversityInstitute}{Institut für Informatik}
+\newcommand{\thesisUniversityCity}{Mainz}
+\newcommand{\thesisUniversityStreetAddress}{Staudingerweg 9b}
+\newcommand{\thesisUniversityPostalCode}{55128}
+
+
+% **************************************************
+% Debug LaTeX Information
+% **************************************************
+%\listfiles
+
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+\usepackage[english]{babel} % babel system, adjust the language of the content
+\PassOptionsToPackage{% setup clean thesis style
+    figuresep=colon,%
+    sansserif=false,%
+    hangfigurecaption=false,%
+    hangsection=true,%
+    hangsubsection=true,%
+    colorize=full,%
+    colortheme=jgured,%
+    bibsys=bibtex,%
+    bibfile=bib-refs,%
+    bibstyle=numeric,%
+    wrapfooter=false,%
+}{cleanthesis}
+\usepackage{cleanthesis}
+
+\hypersetup{% setup the hyperref-package options
+    pdftitle={\thesisTitle},    %   - title (PDF meta)
+    pdfsubject={\thesisSubject},%   - subject (PDF meta)
+    pdfauthor={\thesisName},    %   - author (PDF meta)
+    plainpages=false,           %   -
+    colorlinks=false,           %   - colorize links?
+    linkcolor=ctcolormain,      %   - link color (e.g., TOC)
+    citecolor=ctcolormain,      %   - cite color
+    pdfborder={0 0 0},          %   -
+    breaklinks=true,            %   - allow line break inside links
+    bookmarksnumbered=true,     %
+    bookmarksopen=true          %
+}
