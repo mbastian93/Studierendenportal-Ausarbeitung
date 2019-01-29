@@ -22,9 +22,7 @@
 % **************************************************
 \input{my-thesis-setup}
 
-
 \selectlanguage{german}
-
 % **************************************************
 % Document CONTENT
 % **************************************************
@@ -47,10 +45,10 @@
 \cleardoublepage
 
 \pagestyle{plain}				% display just page numbers
-\input{content/abstract}		% INCLUDE: the abstracts (english and german)
+%\input{content/abstract}		% INCLUDE: the abstracts (english and german)
 \cleardoublepage
 %
-\input{content/acknowledgement} % INCLUDE: acknowledgement
+%\input{content/acknowledgement} % INCLUDE: acknowledgement
 \cleardoublepage
 %
 \setcounter{tocdepth}{2}		% define depth of toc
@@ -65,11 +63,10 @@
 \pagestyle{maincontentstyle} 	% fancy header and footer
 
 \input{content/chapter-introduction} % INCLUDE: introduction
-\input{content/chapter-contents} % INCLUDE: contents
 \input{content/chapter-technologies}	% INCLUDE: technologies
 \input{content/chapter-programming} % INCLUDE: programming
 \input{content/chapter-conclusion} % INCLUDE: conclusion
-\cleardoublepage
+%\cleardoublepage
 
 % --------------------------
 % Back matter
@@ -79,19 +76,42 @@
 \renewcommand{\bibfont}{\normalfont\small}
 \setlength{\biblabelsep}{0pt}
 \setlength{\bibitemsep}{0.5\baselineskip plus 0.5\baselineskip}
+
+
 \printbibliography[nottype=online]
 \printbibliography[heading=subbibliography,title={Webseiten},type=online,prefixnumbers={@}]
+\clearpage
+\section*{Abkürzungsverzeichnis}
+\label{sec:acronyms}
+
+\begin{acronym}
+ \acro{HTML}{Hypertext Markup Language}
+ \acro{XML}{Extensive Markup Language}
+ \acro{CSS}{Cascading Stylesheets}
+ \acro{PWA}{Progressive Web App}
+ \acro{JSON}{JavaScript Object Notation}
+ \acro{SPA}{Single-Page Application}
+ \acro{CLI}{Command-Line Interface}
+ \acro{JSX}{JavaScript XML}
+ \acro{HTTP}{Hypertext Transfer Protocol}
+ \acro{API}{Application Programming Interface}
+ \acro{DOM}{Document Object Model}
+ \acro{FQDN}{Fully Qualified Domain Name}
+ \acro{SOP}{Same-Origin Policy}
+ \acro{CORS}{Cross-Origin Ressource Sharing}
+ \acro{URL}{Uniform Ressource Locator}
+\end{acronym}
 }
-\cleardoublepage
+\clearpage
 
 \listoffigures
-\cleardoublepage
+\clearpage
 
-\listoftables
-\cleardoublepage
+%\listoftables
+%\cleardoublepage
 
 \input{content/colophon}
-\cleardoublepage
+%\cleardoublepage
 
 \input{content/declaration}
 \clearpage

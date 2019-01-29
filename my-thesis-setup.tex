@@ -14,8 +14,8 @@
 \newcommand{\thesisTitle}{Entwicklung eines Studierendenportals als Progressive Web App mit Angular}
 \newcommand{\thesisName}{Marcel Bastian}
 \newcommand{\thesisSubject}{Matrikelnr.: 2687696}
-\newcommand{\thesisDate}{15.Juli 2018}
-\newcommand{\thesisVersion}{My First Draft}
+\newcommand{\thesisDate}{15. Oktober 2018}
+\newcommand{\thesisVersion}{Finale Fassung}
 
 \newcommand{\thesisFirstReviewer}{Prof. Dr. André Brinkmann}
 \newcommand{\thesisFirstReviewerUniversity}{\protect{Johannes Gutenberg-Universität Mainz}}
@@ -74,5 +74,128 @@
     bookmarksopen=true          %
 }
 
+\usepackage[dua]{acronym}
+
+\makeatletter
+\usepackage{color}
+\definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+%\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{editorGray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{editorGreen}{rgb}{0, 0.5, 0} % #007C00 -> rgb(0, 124, 0)
+\definecolor{orange}{rgb}{1,0.45,0.13}      
+\definecolor{olive}{rgb}{0.17,0.59,0.20}
+\definecolor{brown}{rgb}{0.69,0.31,0.31}
+\definecolor{purple}{rgb}{0.38,0.18,0.81}
+\definecolor{lightblue}{rgb}{0.1,0.57,0.7}
+\definecolor{lightred}{rgb}{1,0.4,0.5}
+\usepackage{upquote}
+\usepackage{listings}
+% CSS
+\lstdefinelanguage{CSS}{
+  keywords={color,background-image:,margin,padding,font,weight,display,top,left,right,bottom,list,style,border,size,white,space,min,width, transition:, transform:, transition-property, transition-duration, transition-timing-function}, 
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  alsoletter={:},
+  alsodigit={-}
+}
+
+% TypeScript
+\lstdefinelanguage{TypeScript}{
+  morekeywords={this, private, implements, typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, module, exports, export, import, declarations:, imports:, exports:, bootstrap:, providers:, const, let, ReactDOM, constructor, onInit },
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  morestring=[b]",
+  morestring=[b]',
+  alsoletter={.}
+}
+
+\lstdefinelanguage{HTML5}{
+  language=html,
+  sensitive=true,   
+  %alsoletter={<>=-},    
+  morecomment=[s]{<!--}{-->},
+  tag=[s],
+  otherkeywords={
+  % General
+  >,
+  % Standard tags
+    <!doctype,
+  </html, html>, <head, <title, </title, <style, </style, <link, <a, </a, </head, <meta, <noscript, </noscript, <h1, </h1, <h2, </h2, <h3, </h3,  <ul, </ul, <li, </li, />,<nav, </nav, <img, <input, <button,
+    % body
+    </body, <body,
+    % Divs
+    </div, <div, </div>, <span, </span, </span> 
+    % Paragraphs
+    </p, <p, </p>,
+    % scripts
+    </script, <script,
+  % More tags...
+  <canvas, /canvas>, <svg, <rect, <animateTransform, </rect>, </svg>, <video, <source, <iframe, </iframe>, </video>, <image, </image>, <header, </header, <article, </article, <table, </table, <th, </th, <tr, </tr, <td, </td, <ng-container, </ng-container, 
+  % Angular Tags
+  <app-root, </app-root, <ng-template, </ng-template, <template, </template, <router-outlet, </router-outlet, <Welcome, <mat-toolbar, </mat-toolbar, <mat-icon, </mat-icon, <mat-nav-list, </mat-nav-list, <mat-sidenav-content, </mat-sidenav-content, <mat-sidenav-container, </mat-sidenav-container, <mat-sidenav, </mat-sidenav, <mat-tab, </mat-tab, <mat-card, </mat-card, <mat-card-header, </mat-card-header, <mat-card-title, </mat-card-title, <mat-card-sub-title, </mat-card-sub-title, <mat-card-content, </mat-card-content, <mat-card-footer, </mat-card-footer, <mat-form-field, </mat-form-field, <mat-autocomplete, </mat-autocomplete, <mat-option, </mat-option, <mat-accordion, </mat-accordion, <mat-expansion-panel, </mat-expansion-panel, <mat-expansion-panel-header, </mat-expansion-panel-header, <mat-panel-title, </mat-panel-title, <mat-list, </mat-list, <mat-list-item, </mat-list-item, <ngx-barcode, </ngx-barcode, <mat-spinner, </mat-spinner
+  },
+  ndkeywords={
+  % General
+  =,
+  % HTML attributes
+  charset=, src=, id=, width=, height=, style=, type=, rel=, href=, ngIf=, *ngFor=, routerLink=,
+  % SVG attributes
+  fill=, attributeName=, begin=, dur=, from=, to=, poster=, controls=, x=, y=, repeatCount=, xlink:href=,
+  % properties
+  margin:, padding:, background-image:, border:, top:, left:, width:, height:, margin-top:, margin-bottom:, font-size:, line-height:,
+    % CSS3 properties
+  transform:, -moz-transform:, -webkit-transform:,
+  animation:, -webkit-animation:,
+  transition:,  transition-duration:, transition-property:, transition-timing-function:,
+  }
+}
+
+\lstdefinestyle{htmlcssjs} {%
+  % General design
+%  backgroundcolor=\color{editorGray},
+  basicstyle={\footnotesize\ttfamily},   
+  frame=b,
+  % line-numbers
+  xleftmargin={0.75cm},
+  numbers=left,
+  stepnumber=1,
+  firstnumber=1,
+  numberfirstline=true, 
+  % Code design
+  identifierstyle=\color{black},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywordstyle=\color{editorGreen}\bfseries,
+  stringstyle=\color{editorOcher}\ttfamily,
+  commentstyle=\color{brown}\ttfamily,
+  % Code
+  language=HTML5,
+  alsolanguage=TypeScript,
+  alsodigit={.:;},
+  alsoletter={.},
+  tabsize=2,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true,
+  % German umlauts
+  literate=%
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}1
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+}
+\makeatletter
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
+\renewcommand{\lstlistingname}{Code-Ausschnitt}
+\usepackage{subcaption}
+\usepackage{layouts}

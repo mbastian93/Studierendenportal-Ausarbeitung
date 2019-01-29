@@ -3,19 +3,45 @@
 \chapter{Inhalte der Webanwendung}
 \label{sec:contents}
 
+\cleanchapterquote{}{}{()}
 
 \section{Nachrichten}
 \label{sec:contents:news}
-
+Im ersten Modul sollen Nachrichten und Neuigkeiten der Universität und des Zentrums für Datenverarbeitung (ZDV) angezeigt werden. Dabei handelt es sich bei den Quellen um sogenannte RSS-Feeds
 
 \section{Campus-Karte}
 \label{sec:contents:map}
-
+Das zweite Modul umfasst eine Karte des Universitätscampus, auf der - nach Auswahl - verschiedene Gebäude der Universität angezeigt werden.
 
 \section{Busfahrpläne}
 \label{sec:contents:bus}
-
+Zu den Bus- und Straßenbahnhaltestellen rund um die Universität werden im dritten Modul die Abfahrtszeiten der demnächst eintreffenden Busse und Straßenbahnen angeben.
+Die Fahrpläne werden hier über die API des Rhein-Main Verkehrsverbundes bezogen.
 
 \section{Personensuche}
 \label{sec:contents:searchPerson}
+Das vierte Modul bietet eine Suchmaske um nach Angestellten der Universität zu suchen, die im Informationssystem der Universität Mainz (UnivIS) hinterlegt sind.
 
+\section{Veranstaltungen}
+\label{sec:contents:events}
+In diesem Modul werden die im UnivIS angegebenen Veranstaltung in chronologischer Reihenfolge aufgelistet.
+
+\section{Speisepläne}
+\label{sec:contents:canteens}
+Nach Tag und Ausgabe sortierte Speisepläne zu den Mensen auf dem Universitätsgelände können in diesem Modul abgefragt werden.
+
+\section{Wetter}
+\label{sec:contents:weather}
+Das siebte Modul zeigt die Wetterdaten der Messstation auf dem Campus an.
+
+\section{Öffnungszeiten}
+\label{sec:contents:officeHours}
+Hier können Öffnungszeiten verschiedener Einrichtungen und Büros eingesehen werden.
+
+\section{Authentifizierung}
+\label{sec:contents:auth}
+Dieses nicht sichtbare Modul umfasst einen Authentifizierungsprozess mittels OpenID Connect
+
+\section{Bibliotheksausweis}
+\label{sec:contents:bibID}
+Nach erfolgreicher Authentifizierung wird in diesem Modul ein digital Bibliotheksausweis angezeigt.

@@ -2,12 +2,33 @@
 %
 \chapter{Zusammenfassung}
 \label{sec:conclusion}
+\cleanchapterquote{A program is never less than 90\% complete and never more than 95\% complete}{Terry Baker}{}
 
-
-\section{System Section 1}
+Dieses Kapitel fasst abschließend die Inhalte der Arbeit zusammen, gibt eine Übersicht darüber, welche Ziele erreicht wurden und welche nicht und gibt dann Ausblick darüber, welche Verbesserungen und Überarbeitungen möglich, nötig oder empfehlenswert sind.
+\section{Rückblick}
 \label{sec:conclusion:sec1}
 
+In dieser Arbeit wurde mit dem Angular-Framework eine \acf{SPA} entwickelt, welche dann in eine \acf{PWA} ``umgewandelt`` wurde, sodass diese Web-App auf kompatiblen Geräten bzw. in kompatiblen Browsern (fast) genauso wie eine native Anwendung installiert und genutzt werden kann. Dabei wurde zunächst erläutert, welche Idee hinter \acsp{PWA} steckt und was genau eine solche ausmacht. Anschließend wurden Alternativen zu Angular vorgestellt sowie Gemeinsamkeiten und Unterschiede herausgearbeitet. Basierend darauf wurde dann begründet, warum sich Angular von den vorgestellten Libraries bzw. Frameworks am besten für dieses Projekt geeignet hat und außerdem dieses Framework ausführlich beschrieben. Vor der Beschreibung der eigentlichen Programmierung wurden besondere Hindernisse angeführt, die es bei einem solchen Projekt - nicht nur beim Einsatz von Angular, sondern auch von äquivalenten Alternativen - zu überwinden gilt.
+
+Im Wesentlichen wurden fast alle gewünschten Inhalte, die so auch in der ``Uni Mainz``-App zu finden sind, in die Web-App eingebaut. Es fehlt lediglich die Statusübersicht über die Dienste des ZDV (E-Mail, Remote-Desktop, Druckdienste,...). Außerdem funktioniert das Anzeigen der Kontaktdaten der Ansprechperson einer Veranstaltung nicht, wie gewollt. Geplant war, dass einer jeden Veranstaltung ein Link zugeordnet wird, über den man zum Personensuche-Modul gelangt, in welchem dann die entsprechenden Informationen der Kontaktperson angezeigt werden sollen. Da für die Abfrage der Daten einer Person über ihre ID aber ein \textit{key} benötigt wird, der sich in regelmäßigen Abständen ändert, ist dieser Ansatz so nicht praktikabel. Eine Lösung könnte darin bestehen, die bei der Auflistung der Veranstaltungen erhaltenen Informationen über die Kontaktperson an das Personensuche-Modul weiterzuleiten, statt über die ID eine erneute Suche anzustoßen.
+
+Ansonsten sind es Details, die an der ein- oder anderen Stelle ergänzt werden könnten. So wäre es beispielsweise möglich, im Mensamodul Inhaltsstoffe und Allergene der Speisen anzuführen.
+
+Das Umwandeln der Web-App in eine \textit{\acl{PWA}} hingegen - was ja eine Hauptanforderung an dieses Projekt darstellte - war durch das Paket \textit{@angular/pwa} einfach und unkompliziert. Die größte Schwierigkeit bestand hauptsächlich darin, die in \acs{XML}-Form vorliegenden Daten in \acs{JSON}-Form zu ``übersetzen``.
 
 \section{Ausblick}
 \label{sec:conclusion:future}
+Zu den Inhalten und Funktionen, die noch umgesetzt werden könnten, gehört beispielsweise, dass die Bus- und Straßenbahnhaltestellen nicht auf der Karte markiert werden. Hierauf wurde zunächst verzichtet, weil in dem verwendeten Kartenmaterial bereits Haltestellen eingezeichnet sind. Dennoch wäre es möglich, bei jeder Haltestelle im Busfahrplan-Modul einen Link zu hinterlegen, der zum Kartenmodul weiterleitet, wo dann die Haltestelle auf der Karte markiert würde. Das Busfahrplan-Modul könnte außerdem dahingehend erweitert werden, dass es möglich ist, zu einer Bus- oder Straßenbahnlinie auch den Fahrtverlauf abzufragen.
+
+Weiterhin wäre es denkbar, die Meldungen im Nachrichten-Modul nach Kategorien zu sortieren bzw. dem Nutzer eine Möglichkeit zu bieten, selbst zu entscheiden, welche Kategorien angezeigt werden sollen.
+
+Ebenfalls könnte beispielsweise im Bibliotheksausweis-Modul ein dedizierter Login-Button platziert werden, damit man nicht direkt bei Seitenaufruf weitergeleitet wird. Auf die aktuell umgesetzte Weise ist die Web-App offline quasi nicht möglich, da ohne Internetverbindung logischerweise auch keine externe Authentifizierung möglich ist.
+
+Ein weiterer verbesserungsfähiger Punkt ist das Design bzw. das Layout mancher Module. Es wurde zwar stets versucht, ein für alle Bildschirmgrößen praktikables Layout zu finden, auf Grund der unterschiedlich gearteten Daten war dies aber teilweise nicht ganz einfach. Bei den Veranstaltungen beispielsweise kann die Beschreibung einen einzigen Satz umfassen - aber auch einen ganzen Absatz. Hier ein Layout zu finden, dass beiden Szenarien gerecht wird und nicht in dem einen Fall zu viel und im anderen zu wenig Platz beansprucht - und zwar auf großen, wie auf kleinen Displays - ist mitunter nicht ganz einfach. Das liegt aber genauso wenig an Angular selbst, wie es bei den nicht ganz optimal organisierten Stylesheets der Fall ist.
+
+Obwohl Angular ``testgetriebenes Programmieren`` unterstützt bzw. ermöglicht, wurde hierauf  zugegebenermaßen verzichtet; es könnten dementsprechend noch ein paar Testfälle implementiert werden um sicherzustellen, dass alle Randfälle bedacht wurden. Genauso wäre an ein paar Stellen besseres ``Error-Handling`` - also das Behandeln von \textit{Exceptions} - empfehlenswert. Zwar wurde vor allem beim Parsen der \acs{XML}-Daten darauf geachtet, (möglichst) alle Spezialfälle abzudecken, es ist aber durchaus möglich, dass hier Fehler durch nicht bedachte Szenarien entstehen.
+
+
+
+
 
